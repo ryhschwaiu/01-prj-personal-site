@@ -2,10 +2,109 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Personal Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Global Career Accelerator Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Add your HTML content here -->
+  <!-- Simple coursework portfolio landing page
+       - Replace "Your Name" and the sample text with your own info
+       - This file uses plain HTML and simple CSS so beginners can follow along
+  -->
+
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">Ryan Schwartz</h1>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero section: a short intro and a call-to-action -->
+    <section class="hero">
+      <div class="container">
+        <h2>Global Career Accelerator Portfolio</h2>
+        <p>Hi — I'm <strong>Ryan Schwartz</strong>. This page showcases my work for the Global Career Accelerator program.</p>
+        <a class="cta" href="#projects">See projects</a>
+      </div>
+    </section>
+
+    <!-- About section: short paragraph about you -->
+    <section id="about" class="about container">
+      <h3>About</h3>
+      <p>I'm a mathematics student at Indiana University – Bloomington. I'm interested in data science and software development. I also am paving a professional career in the performing arts as a diverse bass player. I thrive combining technical skills with creative expression in both my academic and artistic pursuits. This accelerator program will help me build a stronger foundation in both technical and creative fields.</p>
+    </section>
+
+    <!-- Projects section: add links to your project pages or files -->
+    <section id="projects" class="projects container">
+      <h3>Selected Projects</h3>
+      <div class="project-list">
+        <article class="project">
+          <h4>Project 1</h4>
+          <p>Placeholder; to be completed. <a href="#">View details</a></p>
+        </article>
+
+        <article class="project">
+          <h4>Project 2</h4>
+          <p>Placeholder; to be completed. <a href="#">View details</a></p>
+        </article>
+
+        <article class="project">
+          <h4>Project 3</h4>
+          <p>Placeholder; to be completed. <a href="#">View details</a></p>
+        </article>
+      </div>
+
+      <p class="tip">This section will be filled out throughout the program.</p>
+    </section>
+
+    <!-- Gallery section: a simple image carousel you can update with your pictures -->
+    <section id="gallery" class="gallery container">
+      <h3>Gallery</h3>
+
+      <!-- Carousel wrapper: add your images to img/ and name them me1.jpg, me2.jpg, etc. -->
+      <div class="carousel" aria-roledescription="carousel">
+        <button class="carousel-btn prev" aria-label="Previous image">◀</button>
+
+        <div class="carousel-track">
+          <!-- The first image is visible by default; others are hidden. Replace src with your own files. -->
+          <img src="img/me1.jpg" alt="Photo of me (1)" class="carousel-image">
+          <img src="img/me2.jpg" alt="Photo of me (2)" class="carousel-image" hidden>
+        </div>
+
+        <button class="carousel-btn next" aria-label="Next image">▶</button>
+      </div>
+
+      <!-- Small dots to indicate and select images -->
+      <div class="carousel-controls" aria-hidden="false">
+        <button class="dot active" data-index="0" aria-label="Show image 1"></button>
+        <button class="dot" data-index="1" aria-label="Show image 2"></button>
+      </div>
+
+      <p class="tip">This carousel shows only your photos: <code>img/me1.jpg</code> and <code>img/me2.jpg</code>. Add or rename files in the <code>img/</code> folder if you want to change them.</p>
+    </section>
+
+    <!-- Contact section: simple contact info -->
+    <section id="contact" class="contact container">
+      <h3>Contact</h3>
+      <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year">2026</span> Your Name — Coursework Portfolio</p>
+    </div>
+  </footer>
+
+  <script>
+    // Keep the copyright year current automatically
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="gallery.js"></script>
 </body>
 </html>
