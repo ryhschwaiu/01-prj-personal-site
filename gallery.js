@@ -15,14 +15,34 @@ document.addEventListener('DOMContentLoaded', function () {
   const dots = Array.from(document.querySelectorAll('.dot'));
   let currentIndex = 0;
 
+  let isTransitioning = false; // prevent overlapping transitions
+
   function show(index) {
     // wrap the index so cycling works
     index = (index + images.length) % images.length;
-    imgEl.src = images[index];
-    imgEl.alt = `Photo ${index + 1}`;
+    if (index === currentIndex || isTransitioning) return;
 
-    dots.forEach((d, i) => d.classList.toggle('active', i === index));
-    currentIndex = index;
+    isTransitioning = true;
+    // start fade-out
+    imgEl.classList.add('fading');
+
+    // Duration should match the CSS transition (300ms)
+    const duration = 300;
+    setTimeout(() => {
+      // swap the image once faded out
+      imgEl.src = images[index];
+      imgEl.alt = `Photo ${index + 1}`;
+
+      // fade back in
+      imgEl.classList.remove('fading');
+
+      // update dots and current index
+      dots.forEach((d, i) => d.classList.toggle('active', i === index));
+      currentIndex = index;
+
+      // allow new transitions after the fade-in completes
+      setTimeout(() => { isTransitioning = false; }, duration);
+    }, duration);
   }
 
   if (prevBtn) prevBtn.addEventListener('click', () => show(currentIndex - 1));
