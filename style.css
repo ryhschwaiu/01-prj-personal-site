@@ -104,7 +104,16 @@ body {
 a:focus { outline: 3px solid rgba(43,108,176,0.25); outline-offset: 2px; }
 
 /* Gallery / Carousel styles */
-.gallery { margin-bottom: 16px; }
+.gallery {
+  /* Match the same card styling as other sections */
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  /* Make the gallery a consistent size similar to the projects section */
+  min-height: 260px;
+}
 .carousel {
   display: flex;
   align-items: center;
@@ -116,13 +125,24 @@ a:focus { outline: 3px solid rgba(43,108,176,0.25); outline-offset: 2px; }
   max-width: 700px;
   position: relative;
   overflow: hidden;
-}
+
+  /* Keep images inset from the card edges and center them */
+  padding: 12px;
+  box-sizing: border-box;
+  height: 220px; /* desktop height for the image area */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
 .carousel-image {
-  width: 100%;
+  /* Leave some space inside the track so image doesn't touch edges */
+  max-width: calc(100% - 24px);
+  max-height: calc(100% - 24px);
   display: block;
   border-radius: 6px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-
+  object-fit: contain; /* preserve aspect ratio */
+  margin: 0 auto;
   /* Simple fade transition when swapping images */
   transition: opacity 300ms ease;
   opacity: 1;
@@ -151,4 +171,7 @@ a:focus { outline: 3px solid rgba(43,108,176,0.25); outline-offset: 2px; }
 @media (max-width: 600px) {
   .carousel { gap: 8px; }
   .carousel-btn { padding: 6px 8px; }
+  /* Reduce the carousel image area on small screens */
+  .carousel-track { height: 160px; }
+  .gallery { min-height: 180px; }
 }
