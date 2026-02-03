@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Global Career Accelerator Portfolio</title>
+  <!-- Google Font for a more stylish look -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,7 +22,9 @@
       <nav class="main-nav" aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
+        <a href="#music">Music</a>
         <a href="#gallery">Gallery</a>
+        <a href="#socials">Socials</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -29,7 +35,7 @@
     <section class="hero">
       <div class="container">
         <h2>Global Career Accelerator Portfolio</h2>
-        <p>Hi — I'm <strong>Ryan Schwartz</strong>. This page showcases my work for the Global Career Accelerator program.</p>
+        <p>Hi — I'm <strong>Ryan Schwartz</strong>. This page serves as a place for me to introduce myself and my interests, and to showcase my work for the Global Career Accelerator program.</p>
         <a class="cta" href="#projects">See projects</a>
       </div>
     </section>
@@ -78,17 +84,10 @@
         <button class="carousel-btn prev" aria-label="Previous image">◀</button>
 
         <div class="carousel-track">
-          <!-- Single image shown at a time. The script swaps the `src` to cycle photos. -->
-          <img src="img/me1.jpg" alt="Photo of me (1)" class="carousel-image">
+          <!-- Multiple images are added by gallery.js so the list stays easy to edit. -->
         </div>
 
         <button class="carousel-btn next" aria-label="Next image">▶</button>
-      </div>
-
-      <!-- Small dots to indicate and select images -->
-      <div class="carousel-controls" aria-hidden="false">
-        <button class="dot active" data-index="0" aria-label="Show image 1"></button>
-        <button class="dot" data-index="1" aria-label="Show image 2"></button>
       </div>
 
       <p class="tip">This carousel is W.I.P.</p>
@@ -105,7 +104,11 @@
         <li>Pajammies: <a href="mailto:pajammiesfunk@gmail.com" aria-label="Email (pajammies) pajammiesfunk@gmail.com">pajammiesfunk@gmail.com</a></li>
       </ul>
       <p>Phone: <a href="tel:2677803423">(267) 780-3423</a></p>
+    </section>
 
+    <!-- Socials section: separated from contact details -->
+    <section id="socials" class="socials-section container">
+      <h3>Socials</h3>
       <!-- Social media links: separated into personal and band accounts.
            - Keep link text simple for beginners; replace # with actual URLs.
            - Links open in a new tab (target="_blank") and use rel for security.
@@ -114,18 +117,66 @@
         <div class="social-column">
           <h4>Personals</h4>
           <ul>
-            <li><a href="https://www.instagram.com/ryan.h.schwartz/" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram (opens in a new tab)">Instagram</a></li>
-            <li><a href="https://www.linkedin.com/in/ryan-schwartz-8274b9189/" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn (opens in a new tab)">LinkedIn</a></li>
-            <li><a href="#" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+            <li>
+              <a href="https://www.instagram.com/ryan.h.schwartz/" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram (opens in a new tab)">
+                <!-- Instagram icon (SVG) -->
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 7.34A4.66 4.66 0 1 0 16.66 12 4.66 4.66 0 0 0 12 7.34Zm0 7.69A3.03 3.03 0 1 1 15.03 12 3.03 3.03 0 0 1 12 15.03Zm6.06-7.92a1.09 1.09 0 1 1-1.09-1.09 1.09 1.09 0 0 1 1.09 1.09ZM20 3.54a4.6 4.6 0 0 0-2.6-2.6C15.8.44 8.2.44 6.6.94a4.6 4.6 0 0 0-2.6 2.6C3.44 5.2 3.44 12.8 3.94 14.4a4.6 4.6 0 0 0 2.6 2.6c1.6.5 9.2.5 10.8 0a4.6 4.6 0 0 0 2.6-2.6c.5-1.6.5-9.2 0-10.8ZM18.6 16.5a2.73 2.73 0 0 1-1.54 1.54c-1.07.42-7.05.42-8.12 0a2.73 2.73 0 0 1-1.54-1.54c-.42-1.07-.42-7.05 0-8.12a2.73 2.73 0 0 1 1.54-1.54c1.07-.42 7.05-.42 8.12 0a2.73 2.73 0 0 1 1.54 1.54c.42 1.07.42 7.05 0 8.12Z"/>
+                </svg>
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/ryan-schwartz-8274b9189/" target="_blank" rel="noopener noreferrer" aria-label="Open LinkedIn (opens in a new tab)">
+                <!-- LinkedIn icon (SVG) -->
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.05-1.86-3.05-1.86 0-2.15 1.45-2.15 2.95v5.67H9.34V9h3.41v1.56h.05c.47-.9 1.62-1.86 3.34-1.86 3.57 0 4.23 2.35 4.23 5.41v6.34ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM3.56 20.45h3.55V9H3.56Z"/>
+                </svg>
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href="https://music.apple.com/profile/ryan_schwartz/" target="_blank" rel="noopener noreferrer" aria-label="Open Apple Music (opens in a new tab)">
+                <!-- Apple Music icon (SVG) -->
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M20 3v12.5a2.5 2.5 0 1 1-1-2V7.2l-8 1.7v7.6a2.5 2.5 0 1 1-1-2V6l10-2.2Z"/>
+                </svg>
+                Apple Music
+              </a>
+            </li>
           </ul>
         </div>
 
         <div class="social-column">
           <h4>Bands</h4>
           <ul>
-            <li><a href="https://linktr.ee/pajammies/" target="_blank" rel="noopener noreferrer" aria-label="Open Pajammies Linktree (opens in a new tab)">Pajammies (Linktree)</a></li>
-            <li><a href="https://www.instagram.com/thefreeridersband/" target="_blank" rel="noopener noreferrer" aria-label="Open Freeriders Instagram (opens in a new tab)">Freeriders (Instagram)</a></li>
-            <li><a href="https://www.instagram.com/cardinal_band_/" target="_blank" rel="noopener noreferrer" aria-label="Open Cardinal Instagram (opens in a new tab)">Cardinal (Instagram)</a></li>
+            <li>
+              <a href="https://linktr.ee/pajammies/" target="_blank" rel="noopener noreferrer" aria-label="Open Pajammies Linktree (opens in a new tab)">
+                <!-- Linktree icon (SVG) -->
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M13.97 10.63 22.6 2h-3.44l-5.19 5.19V2h-3.94v5.19L4.83 2H1.4l8.63 8.63H1.4v3.34h7.24l-5.64 5.64h3.44l3.99-3.99V22h3.94v-6.38l3.99 3.99h3.44l-5.64-5.64h7.24v-3.34z"/>
+                </svg>
+                Pajammies (Linktree)
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/thefreeridersband/" target="_blank" rel="noopener noreferrer" aria-label="Open Freeriders Instagram (opens in a new tab)">
+                <!-- Instagram icon (SVG) -->
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 7.34A4.66 4.66 0 1 0 16.66 12 4.66 4.66 0 0 0 12 7.34Zm0 7.69A3.03 3.03 0 1 1 15.03 12 3.03 3.03 0 0 1 12 15.03Zm6.06-7.92a1.09 1.09 0 1 1-1.09-1.09 1.09 1.09 0 0 1 1.09 1.09ZM20 3.54a4.6 4.6 0 0 0-2.6-2.6C15.8.44 8.2.44 6.6.94a4.6 4.6 0 0 0-2.6 2.6C3.44 5.2 3.44 12.8 3.94 14.4a4.6 4.6 0 0 0 2.6 2.6c1.6.5 9.2.5 10.8 0a4.6 4.6 0 0 0 2.6-2.6c.5-1.6.5-9.2 0-10.8ZM18.6 16.5a2.73 2.73 0 0 1-1.54 1.54c-1.07.42-7.05.42-8.12 0a2.73 2.73 0 0 1-1.54-1.54c-.42-1.07-.42-7.05 0-8.12a2.73 2.73 0 0 1 1.54-1.54c1.07-.42 7.05-.42 8.12 0a2.73 2.73 0 0 1 1.54 1.54c.42 1.07.42 7.05 0 8.12Z"/>
+                </svg>
+                Freeriders (Instagram)
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/cardinal_band_/" target="_blank" rel="noopener noreferrer" aria-label="Open Cardinal Instagram (opens in a new tab)">
+                <!-- Instagram icon (SVG) -->
+                <svg class="social-icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 7.34A4.66 4.66 0 1 0 16.66 12 4.66 4.66 0 0 0 12 7.34Zm0 7.69A3.03 3.03 0 1 1 15.03 12 3.03 3.03 0 0 1 12 15.03Zm6.06-7.92a1.09 1.09 0 1 1-1.09-1.09 1.09 1.09 0 0 1 1.09 1.09ZM20 3.54a4.6 4.6 0 0 0-2.6-2.6C15.8.44 8.2.44 6.6.94a4.6 4.6 0 0 0-2.6 2.6C3.44 5.2 3.44 12.8 3.94 14.4a4.6 4.6 0 0 0 2.6 2.6c1.6.5 9.2.5 10.8 0a4.6 4.6 0 0 0 2.6-2.6c.5-1.6.5-9.2 0-10.8ZM18.6 16.5a2.73 2.73 0 0 1-1.54 1.54c-1.07.42-7.05.42-8.12 0a2.73 2.73 0 0 1-1.54-1.54c-.42-1.07-.42-7.05 0-8.12a2.73 2.73 0 0 1 1.54-1.54c1.07-.42 7.05-.42 8.12 0a2.73 2.73 0 0 1 1.54 1.54c.42 1.07.42 7.05 0 8.12Z"/>
+                </svg>
+                Cardinal (Instagram)
+              </a>
+            </li>
           </ul>
         </div>
       </div>
